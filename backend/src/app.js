@@ -1,9 +1,12 @@
-const express = require('express')
+import express from "express";
+import aiRoutes from "./routes/ai.routes.js";
 
-const app = express()
+const app = express();
 
-app.get('/', (req,res)=>{
-    res.send("hello world")
-})
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 
-module.exports = app
+app.use("/ai", aiRoutes);
+
+export default app;
