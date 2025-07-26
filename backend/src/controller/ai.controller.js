@@ -1,4 +1,4 @@
-import generateContent from "../services/ai.service.js";
+const  aiService = require('../services/ai.service') 
 
 export const getResponse = async (req, res) => {
   const prompt = req.query.prompt;
